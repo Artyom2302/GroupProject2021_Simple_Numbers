@@ -139,7 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FindPrimitiveNumbers.cpp" />
     <ClCompile Include="Simple_Numbers.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Simple_Numbers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
