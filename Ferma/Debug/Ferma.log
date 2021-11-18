@@ -1,0 +1,5 @@
+﻿  Ferma.cpp
+C:\Users\yeezyao\source\repos\Ferma\Ferma.cpp(39,20): warning C4244: аргумент: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\yeezyao\source\repos\Ferma\Ferma.cpp(39,17): warning C4244: аргумент: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\yeezyao\source\repos\Ferma\Ferma.cpp(41,28): warning C4244: =: преобразование "double" в "unsigned __int64", возможна потеря данных
+  Ferma.vcxproj -> C:\Users\yeezyao\source\repos\Ferma\Debug\Ferma.exe
