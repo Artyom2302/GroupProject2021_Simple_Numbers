@@ -1,6 +1,6 @@
 ﻿  Ferma.cpp
-C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(33,20): warning C4244: аргумент: преобразование "unsigned __int64" в "int", возможна потеря данных
-C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(33,17): warning C4244: аргумент: преобразование "const unsigned __int64" в "int", возможна потеря данных
-C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(35,28): warning C4244: =: преобразование "double" в "unsigned __int64", возможна потеря данных
-C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(70,20): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
+C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(82,20): warning C4244: аргумент: преобразование "unsigned __int64" в "int", возможна потеря данных
+C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(82,17): warning C4244: аргумент: преобразование "const unsigned __int64" в "int", возможна потеря данных
+C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(84,28): warning C4244: =: преобразование "double" в "unsigned __int64", возможна потеря данных
+C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Ferma.cpp(124,20): warning C4244: аргумент: преобразование "unsigned __int64" в "const unsigned int", возможна потеря данных
   Ferma.vcxproj -> C:\Users\yeezyao\Documents\GitHub\GroupProject2021_Simple_Numbers\Ferma\Debug\Ferma.exe

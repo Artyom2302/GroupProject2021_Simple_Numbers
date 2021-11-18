@@ -17,17 +17,27 @@ long NOD(int a, int b) {
             break;
         }
     }
-    cout << "Наибольший общий делитель: " << nod << endl;
+    //cout << "Наибольший общий делитель: " << nod << endl;
     return nod;
 }
 
-void schet(const unsigned long long p)
+/* Функция schet работает корректно до тех пор, пока переменная avstepeni < 18 446 744 073 709 551 615,
+ максимальный диапазон типа данных не позволяет проверить любые числа по методу простоты Ферма,
+поэтому в качестве рандомных чисел возьмём какое-нибудь маленькое число,
+ значение которого при возведении в степень будет попадать в необходимый диапазон */
+
+/*void schet(const unsigned long long p)
 {
     unsigned long long a = 0, avstepeni = 0, povt = 0;
     for (povt = 0; povt < 20; povt++)
     {
+        if (p == 1)
+        {
+            cout << "Число " << p << " является простым" << endl;
+            break;
+        }
+        
         a = 1 + rand() % (p - 1);
-        //a = 2;
         cout << "Случайное число: " << a << endl;
 
         if (NOD(p, a) == 1)
@@ -39,15 +49,59 @@ void schet(const unsigned long long p)
                 cout << "Число " << p << " является простым " << endl;
             }
             else
+            {
                 cout << "Число " << p << " является составным " << endl;
-            break;
+                break;
+            }
         }
         else
+        {
             cout << "Число " << p << " является составным " << endl;
-        break;
-
+            break;
+        }
+        
     }
+}*/
+
+void schet(const unsigned long long p)
+{
+    unsigned long long a = 0, avstepeni = 0, povt = 0;
+    //for (povt = 0; povt < 20; povt++)
+    //{
+        if (p == 1)
+        {
+            cout << "Число " << p << " является простым" << endl;
+            //break;
+        }
+        
+        a = 1 + rand() % (p - 1);
+        a = 2;
+        
+        //cout << "Случайное число: " << a << endl;
+
+        if (NOD(p, a) == 1)
+        {
+            avstepeni = pow(a, (p - 1));
+            //cout << avstepeni << "    " << (p - 1) << endl;
+            if (avstepeni % p == 1)
+            {
+                cout << "Число " << p << " является простым " << endl;
+            }
+            else
+            {
+                cout << "Число " << p << " является составным " << endl;
+                //break;
+            }
+        }
+        else
+        {
+            cout << "Число " << p << " является составным " << endl;
+            //break;
+        }
+
+    //}
 }
+
 
 unsigned int main()
 {
