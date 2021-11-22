@@ -21,6 +21,9 @@
     <ClCompile Include="FindPrimitiveNumbers.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Atkin.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Simple_Numbers.h">

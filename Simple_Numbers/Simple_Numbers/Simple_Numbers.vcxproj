@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Atkin.cpp" />
     <ClCompile Include="FindPrimitiveNumbers.cpp" />
     <ClCompile Include="Simple_Numbers.cpp" />
   </ItemGroup>
