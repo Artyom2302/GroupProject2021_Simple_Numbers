@@ -7,7 +7,7 @@ vector <int> SearchSimpleNumber(CPPFanAlgorithm Search,vector <int> massiv){
 	findednumbers= Search(massiv);
 	auto finish = chrono::system_clock::now();
 	auto time = chrono::duration_cast<chrono::microseconds>(finish - start).count();
-	cout << "Время работы алгоритма: " <<time ;
+	cout << "algorithm work time(milliseconds): " <<time <<endl;
 	return findednumbers;
 }
 vector <int> SuperAdvancedMassivGenerationByGeniusOfThisCentury(int n) {
@@ -22,7 +22,6 @@ vector <int> SuperAdvancedMassivGenerationByGeniusOfThisCentury(int n) {
 	return massiv;
 }
 
-
 //функция сравнения c идеальным алгоритмом
 //bool PostavteNormPointPlease(const vector <int>& findedmassiv, const vector <int>& comparedMassiv) {
 //	if (equal(findedmassiv.begin(), findedmassiv.end(), comparedMassiv.begin(), comparedMassiv.end()))
@@ -36,10 +35,14 @@ vector <int> SuperAdvancedMassivGenerationByGeniusOfThisCentury(int n) {
 
 int main()
 {
-	vector < int> massiv,findednumbers;
-	massiv=SuperAdvancedMassivGenerationByGeniusOfThisCentury(100);
-	findednumbers=SearchSimpleNumber(FindPrimitiveNumbers,massiv);
 	
+	vector < int> massiv,findednumbers;
+	massiv=SuperAdvancedMassivGenerationByGeniusOfThisCentury(100000);
+	findednumbers=SearchSimpleNumber(FindPrimitiveNumbers,massiv);
+	massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(1000000);
+	findednumbers = SearchSimpleNumber(FindPrimitiveNumbers, massiv);
+	massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(10000000);
+	findednumbers = SearchSimpleNumber(FindPrimitiveNumbers, massiv);
 
 
 }

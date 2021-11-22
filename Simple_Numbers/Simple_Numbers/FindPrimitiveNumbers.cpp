@@ -1,14 +1,27 @@
 #include <vector>
-#include <algorithm>
+
 using namespace std;
 
+bool Perebor(int x) {
+	bool prostoe = true;
+	int d = 2;
+	while (d*d<=x)
+	{
+		if (x % d == 0) {
+			prostoe =false;
+			break;
+		}
+		d = d + 1;
+	}
+	return prostoe;
+}
+
 vector <int> FindPrimitiveNumbers(vector <int> massiv) {
-	//ַהוסü אכדמנטעל
-
-	massiv = {1,2,3};
-
-
-
-	//
-	return massiv;
+	vector <int> finded;
+	for (auto& elem : massiv) {
+		if (Perebor(elem)) {
+			finded.push_back(elem);
+		}
+	}
+	return finded;
 }
