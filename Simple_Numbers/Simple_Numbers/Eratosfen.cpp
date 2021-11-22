@@ -8,7 +8,6 @@ vector <int> Eratosfen(vector <int> mas)
 	{
 		if (mas[p] != 0)
 		{
-			cout << mas[p] << endl;
 			for (int j = p * p; j < mas.size(); j += p)
 				mas[j] = 0;
 		}
