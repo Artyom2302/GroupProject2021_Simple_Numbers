@@ -139,6 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <ClCompile Include="Eratosfen.cpp" />
+=======
+    <ClCompile Include="Atkin.cpp" />
+>>>>>>> 329f07dd24e330d88e855a0ed627962d06c97fc9
+=======
+    <ClCompile Include="Atkin.cpp" />
+>>>>>>> 329f07dd24e330d88e855a0ed627962d06c97fc9
     <ClCompile Include="FindPrimitiveNumbers.cpp" />
     <ClCompile Include="Simple_Numbers.cpp" />
   </ItemGroup>

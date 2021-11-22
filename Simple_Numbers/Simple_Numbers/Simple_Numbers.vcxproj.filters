@@ -21,6 +21,17 @@
     <ClCompile Include="FindPrimitiveNumbers.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <ClCompile Include="Eratosfen.cpp">
+=======
+    <ClCompile Include="Atkin.cpp">
+>>>>>>> 329f07dd24e330d88e855a0ed627962d06c97fc9
+=======
+    <ClCompile Include="Atkin.cpp">
+>>>>>>> 329f07dd24e330d88e855a0ed627962d06c97fc9
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Simple_Numbers.h">
