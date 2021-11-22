@@ -6,5 +6,5 @@
 #include <conio.h>
 using namespace std;
 using CPPFanAlgorithm = vector <int>(*)(vector <int>);
-vector <int> FindPrimitiveNumbers(vector <int>);//Добавить функцию ,которая будет вызываться в main;
-vector <int> Eratosfen(vector <int>);
+vector <int> FindPrimitiveNumbers(vector <int>);//Г„Г®ГЎГ ГўГЁГІГј ГґГіГ­ГЄГ¶ГЁГѕ ,ГЄГ®ГІГ®Г°Г Гї ГЎГіГ¤ГҐГІ ГўГ»Г§Г»ГўГ ГІГјГ±Гї Гў main;
+
