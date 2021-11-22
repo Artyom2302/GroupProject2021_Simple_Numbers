@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Atkin.cpp" />
+    <ClCompile Include="Eratosfen.cpp" />
     <ClCompile Include="FindPrimitiveNumbers.cpp" />
     <ClCompile Include="Simple_Numbers.cpp" />
   </ItemGroup>
