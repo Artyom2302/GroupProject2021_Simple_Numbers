@@ -1,5 +1,4 @@
-
-#include <vector>
+#include "Simple_Numbers.h"
 #include <random>
 
 using namespace std;

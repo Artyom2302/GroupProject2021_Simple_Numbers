@@ -9,5 +9,6 @@ using CPPFanAlgorithmForNumbers = bool(*)(int x);
 using CPPFanAlgorithmForMassiv = vector <int>(*)(vector	<int> x);
 bool Perebor(int x);
 bool Test_Millera_Rabina( int x);
+bool Ferma(int x);
 vector <int> Eratosfen(vector <int>);
 vector <int> Atkin(vector <int>);

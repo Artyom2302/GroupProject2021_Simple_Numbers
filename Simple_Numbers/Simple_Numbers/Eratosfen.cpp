@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include "Simple_Numbers.h"
 using namespace std;
 
 

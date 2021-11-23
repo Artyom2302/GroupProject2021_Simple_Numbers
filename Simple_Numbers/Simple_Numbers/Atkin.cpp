@@ -3,15 +3,12 @@
 #include <string>
 #include <vector>
 #include <cmath>
+#include "Simple_Numbers.h"
 
 using namespace std;
 
 vector <int> Atkin( vector <int> Massiv)
 {
-
-    int limit = Massiv.size();
-    int sqr_lim;
-    vector <bool> is_prime;
 
     int limit = Massiv.size();
     int sqr_lim;
@@ -69,27 +66,19 @@ vector <int> Atkin( vector <int> Massiv)
 
     int count = 0;
 
-    int count=0;
-
     for (auto elem : is_prime) {
         if (elem && (elem % 3 != 0) && (elem % 5 != 0)) {
             count++;
         }
     }
 
-    // ¬ывод списка простых чисел в консоль.
-    vector <int> finded;
-    finded.reserve(count);
-    finded.push_back(2);
-    finded.push_back(3);
-    finded.push_back(5);
 
     vector <int> finded;
     finded.reserve(count);
     finded.push_back(2);
     finded.push_back(3);
     finded.push_back(5);
-    // ¬ывод списка простых чисел в консоль.
+
 
     for (i = 6; i <= limit; ++i) {  // добавлена проверка делимости на 3 и 5. ¬ оригинальной версии алгоритма потребности в ней нет.
         if ((is_prime[i]) && (i % 3 != 0) && (i % 5 != 0))
