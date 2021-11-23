@@ -12,3 +12,4 @@ bool Test_Millera_Rabina( int x);
 bool Ferma(int x);
 vector <int> Eratosfen(vector <int>);
 vector <int> Atkin(vector <int>);
+int modpow(int a, int b, int n);

@@ -2,17 +2,8 @@
 #include <cmath>
 #include <random>
 
-template <typename T>
-T modpow(T base, T exp, T modulus) {
-	base %= modulus;
-	T result = 1;
-	while (exp > 0) {
-		if (exp & 1) result = (result * base) % modulus;
-		base = (base * base) % modulus;
-		exp >>= 1;
-	}
-	return result;
-}
+
+
 
 bool Test_Millera_Rabina(int n) {
 	int k = 100;
@@ -32,7 +23,7 @@ bool Test_Millera_Rabina(int n) {
 		int a;
 		std::random_device rd;
 		std::mt19937 gen(rd());
-		std::uniform_int_distribution<unsigned long long> dis(2, n-2);
+		std::uniform_int_distribution<unsigned int> dis(2, n-2);
 		//rand(); 32767
 		a = dis(gen);
 		int x = modpow(a, t, n);
