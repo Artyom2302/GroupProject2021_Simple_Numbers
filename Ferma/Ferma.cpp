@@ -74,14 +74,3 @@ bool Ferma(int p)
 		return prostoe;
 
 }
-//
-//vector <int> FindPrimitiveNumbers(vector <int> massiv) {
-//	vector <int> finded;
-//	finded.reserve(massiv.size());
-//	for (auto& elem : massiv) {
-//		if (Pereborka(elem)) {
-//			finded.push_back(elem);
-//		}
-//	}
-//	return finded;
-//}
