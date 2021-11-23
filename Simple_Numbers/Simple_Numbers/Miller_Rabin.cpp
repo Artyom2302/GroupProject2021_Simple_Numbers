@@ -14,7 +14,8 @@ T modpow(T base, T exp, T modulus) {
 	return result;
 }
 
-bool Test_Millera_Rabina(int n, int k) {
+bool Test_Millera_Rabina(int n) {
+	int k = 100;
 	if (n == 2 || n == 3) {
 		return true;
 	}
@@ -35,7 +36,7 @@ bool Test_Millera_Rabina(int n, int k) {
 		//rand(); 32767
 		a = dis(gen);
 		int x = modpow(a, t, n);
-		if (x == 1 || x = n - 1) {
+		if (x == 1 || x == n - 1) {
 			continue;
 		}
 		for (int r = 1; r < s; ++r) {
