@@ -1,127 +1,87 @@
-﻿
-#include <iostream>
-#include <vector>
-#include <string>
-#include < math.h >
+﻿#include <vector>
+#include <random>
 
 using namespace std;
 
-long NOD(int a, int b) {
+int NOD(int a, int b)
+{
 
-    int nod = 0;
-    for (int i = a; i > 0; i--) 
-    {
-        if (a % i == 0 && b % i == 0) 
-        {
-            nod = i;
-            break;
-        }
-    }
-    //cout << "Наибольший общий делитель: " << nod << endl;
-    return nod;
+	int nod = 0;
+	for (int i = a; i > 0; i--)
+	{
+		if (a % i == 0 && b % i == 0)
+		{
+			nod = i;
+			return nod;
+		}
+	}
 }
 
-/* Функция schet работает корректно до тех пор, пока переменная avstepeni < 18 446 744 073 709 551 615,
- максимальный диапазон типа данных не позволяет проверить любые числа по методу простоты Ферма,
-поэтому в качестве рандомных чисел возьмём какое-нибудь маленькое число,
- значение которого при возведении в степень будет попадать в необходимый диапазон */
-
-/*void schet(const unsigned long long p)
-{
-    unsigned long long a = 0, avstepeni = 0, povt = 0;
-    for (povt = 0; povt < 20; povt++)
-    {
-        if (p == 1)
-        {
-            cout << "Число " << p << " является простым" << endl;
-            break;
-        }
-        
-        a = 1 + rand() % (p - 1);
-        cout << "Случайное число: " << a << endl;
-
-        if (NOD(p, a) == 1)
-        {
-            avstepeni = pow(a, (p - 1));
-            cout << avstepeni << "    " << (p - 1) << endl;
-            if (avstepeni % p == 1)
-            {
-                cout << "Число " << p << " является простым " << endl;
-            }
-            else
-            {
-                cout << "Число " << p << " является составным " << endl;
-                break;
-            }
-        }
-        else
-        {
-            cout << "Число " << p << " является составным " << endl;
-            break;
-        }
-        
-    }
-}*/
-
-void schet(const unsigned long long p)
-{
-    unsigned long long a = 0, avstepeni = 0, povt = 0;
-    //for (povt = 0; povt < 20; povt++)
-    //{
-        if (p == 1)
-        {
-            cout << "Число " << p << " является простым" << endl;
-            //break;
-        }
-        
-        a = 1 + rand() % (p - 1);
-        a = 2;
-        
-        //cout << "Случайное число: " << a << endl;
-
-        if (NOD(p, a) == 1)
-        {
-            avstepeni = pow(a, (p - 1));
-            //cout << avstepeni << "    " << (p - 1) << endl;
-            if (avstepeni % p == 1)
-            {
-                cout << "Число " << p << " является простым " << endl;
-            }
-            else
-            {
-                cout << "Число " << p << " является составным " << endl;
-                //break;
-            }
-        }
-        else
-        {
-            cout << "Число " << p << " является составным " << endl;
-            //break;
-        }
-
-    //}
+template <typename T>
+T modpow(T base, T exp, T modulus) {
+	base %= modulus;
+	T result = 1;
+	while (exp > 0) {
+		if (exp & 1) result = (result * base) % modulus;
+		base = (base * base) % modulus;
+		exp >>= 1;
+	}
+	return result;
 }
 
 
-unsigned int main()
+bool Ferma(int p)
 {
-    setlocale(LC_ALL, "Russian");
-    vector <unsigned long long> vvod;
-    unsigned long long p = 0, i = 0;
-    cout << "Введите 0 , чтобы закончить ввод. " << endl << "Введите необходимоe количество натуральных чисел: ";
+	bool prostoe = true;
+	int avstepeni = 0, a = 0;
 
-    while (1) //Заполнение вектора введёнными числами
-    {
-        cin >> p;
-        if (p == 0)
-            break;
-        else
-            vvod.push_back(p);
-    }
+	if (p == 2 || p == 3) {
+		return true;
+	}
+	else if (p < 2) 
+	{
+		return false;
+	}
 
-    for (i; i < vvod.size(); i++)
-    {
-        schet(vvod[i]);
-    }
+
+
+	for (int povt = 0; povt < 20; povt++) 
+	{
+
+		std::random_device rd;
+		std::mt19937 gen(rd());
+		std::uniform_int_distribution <unsigned long long> dis(2, p - 1);
+		//rand(); 32767
+		a = dis(gen);
+
+		if (NOD(p, a) == 1)
+		{
+			avstepeni = modpow(a, p - 1, p);
+			if (avstepeni != 1)
+			{
+				prostoe = false;
+				return prostoe;
+			}
+		}
+		else
+		{
+			prostoe = false;
+			return prostoe;
+		}
+	}
+
+	if (prostoe == true)
+		return prostoe;
+
 }
-
+//
+//vector <int> FindPrimitiveNumbers(vector <int> massiv) {
+//	vector <int> finded;
+//	finded.reserve(massiv.size());
+//	for (auto& elem : massiv) {
+//		if (Pereborka(elem)) {
+//			finded.push_back(elem);
+//		}
+//	}
+//	return finded;
+//}

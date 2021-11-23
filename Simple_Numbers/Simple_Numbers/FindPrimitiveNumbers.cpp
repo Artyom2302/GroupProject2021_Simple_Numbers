@@ -18,6 +18,7 @@ bool Perebor(int x) {
 
 vector <int> FindPrimitiveNumbers(vector <int> massiv) {
 	vector <int> finded;
+	finded.reserve(massiv.size());
 	for (auto& elem : massiv) {
 		if (Perebor(elem)) {
 			finded.push_back(elem);

@@ -37,14 +37,21 @@ int main()
 {
 	
 	vector < int> massiv,findednumbers;
-	massiv=SuperAdvancedMassivGenerationByGeniusOfThisCentury(100000);
+	massiv=SuperAdvancedMassivGenerationByGeniusOfThisCentury(1000);
 	findednumbers=SearchSimpleNumber(FindPrimitiveNumbers,massiv);
+	findednumbers = SearchSimpleNumber(Miller_Rabin, massiv);
+	findednumbers = SearchSimpleNumber(Eratosfen, massiv);
+
 	massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(1000000);
 	findednumbers = SearchSimpleNumber(FindPrimitiveNumbers, massiv);
+	findednumbers = SearchSimpleNumber(Miller_Rabin, massiv);
+	findednumbers = SearchSimpleNumber(Eratosfen, massiv);
 	massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(10000000);
 	findednumbers = SearchSimpleNumber(FindPrimitiveNumbers, massiv);
+	findednumbers = SearchSimpleNumber(Miller_Rabin, massiv);
+	findednumbers = SearchSimpleNumber(Eratosfen, massiv);
 	
-	auto it = findednumbers.end()-1;
-	cout << *it;
+	/*auto it = findednumbers.end()-1;
+	cout << *it;*/
 
 }
