@@ -1,3 +1,4 @@
+
 #include <vector>
 #include <random>
 
@@ -74,3 +75,4 @@ bool Ferma(int p)
 		return prostoe;
 
 }
+

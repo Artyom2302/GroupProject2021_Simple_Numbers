@@ -6,22 +6,31 @@
 
 using namespace std;
 
-vector <int> Atkin(vector <int> Massiv)
+vector <int> Atkin( vector <int> Massiv)
 {
-    int limit = 100;
+
+    int limit = Massiv.size();
     int sqr_lim;
-    bool is_prime[101];
+    vector <bool> is_prime;
+
+    int limit = Massiv.size();
+    int sqr_lim;
+    vector <bool>  is_prime;
+
     int x2, y2;
     int i, j;
     int n;
-
+    is_prime.resize(Massiv.size());
     // Инициализация решета
     sqr_lim = (int)sqrt((long double)limit);
     for (i = 0; i <= limit; ++i)
-        is_prime[i] = false;
+
+        is_prime.push_back(false);
+
+        is_prime.push_back(false) ;
+
     is_prime[2] = true;
     is_prime[3] = true;
-
     // Предположительно простые — это целые с нечётным числом
     // представлений в данных квадратных формах.
     // x2 и y2 — это квадраты i и j (оптимизация).
@@ -58,11 +67,33 @@ vector <int> Atkin(vector <int> Massiv)
         }
     }
 
+    int count = 0;
+
+    int count=0;
+
+    for (auto elem : is_prime) {
+        if (elem && (elem % 3 != 0) && (elem % 5 != 0)) {
+            count++;
+        }
+    }
+
     // Вывод списка простых чисел в консоль.
-    printf("2, 3, 5");
+    vector <int> finded;
+    finded.reserve(count);
+    finded.push_back(2);
+    finded.push_back(3);
+    finded.push_back(5);
+
+    vector <int> finded;
+    finded.reserve(count);
+    finded.push_back(2);
+    finded.push_back(3);
+    finded.push_back(5);
+    // Вывод списка простых чисел в консоль.
+
     for (i = 6; i <= limit; ++i) {  // добавлена проверка делимости на 3 и 5. В оригинальной версии алгоритма потребности в ней нет.
         if ((is_prime[i]) && (i % 3 != 0) && (i % 5 != 0))
-            printf(", %d", i);
-
+            finded.push_back(i);
     }
+    return finded;
 }
