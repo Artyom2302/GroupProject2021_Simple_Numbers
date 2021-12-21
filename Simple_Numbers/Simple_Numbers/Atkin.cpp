@@ -22,8 +22,6 @@ vector <int> Atkin( vector <int> Massiv)
     sqr_lim = (int)sqrt((long double)limit);
     for (i = 0; i <= limit; ++i)
 
-        is_prime.push_back(false);
-
         is_prime.push_back(false) ;
 
     is_prime[2] = true;

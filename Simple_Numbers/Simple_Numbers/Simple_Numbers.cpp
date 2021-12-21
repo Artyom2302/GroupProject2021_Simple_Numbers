@@ -15,12 +15,8 @@ int modpow(int a, int b, int n) {
 
 //функция сравнения c идеальным алгоритмом
 bool PostavteNormMarksPlease(const vector <int>& findedmassiv, const vector <int>& comparedMassiv) {
-	if (equal(findedmassiv.begin(), findedmassiv.end(), comparedMassiv.begin(), comparedMassiv.end()))
-	{
-		return true;
-	}
-	else
-		return false;
+	return (equal(findedmassiv.begin(), findedmassiv.end(), comparedMassiv.begin(), comparedMassiv.end()));
+	
 }
 
 vector <int> SearchSimpleNumber(CPPFanAlgorithmForNumbers Search, const vector <int> &massiv, string funname){
@@ -80,28 +76,28 @@ int main()
 	vector <int> idealfinded, findedMiller,findedAtkin,findedErotosfen,findedFerma, massiv;
 	int n;
 	
-	//do
-	//{
-	//	cout << "Enter the value of the array ";
-	//	cin >> n;
-	//	if (n > 0){
-	//		massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(n);
-	//		idealfinded = SearchSimpleNumber(Perebor, massiv, "Perebor");
+	do
+	{
+		cout << "Enter the value of the array ";
+		cin >> n;
+		if (n > 0){
+			massiv = SuperAdvancedMassivGenerationByGeniusOfThisCentury(n);
+			idealfinded = SearchSimpleNumber(Perebor, massiv, "Perebor");
 
-	//		findedErotosfen = SearchSimpleNumber(Eratosfen, massiv, "Eratosfen");
-	//		PostavteNormMarksPlease(idealfinded, findedErotosfen) ? cout << "\nSame\n" : cout << "\nNot same\n";
+			findedErotosfen = SearchSimpleNumber(Eratosfen, massiv, "Eratosfen");
+			PostavteNormMarksPlease(idealfinded, findedErotosfen) ? cout << "\nSame\n" : cout << "\nNot same\n";
 
-	//		findedAtkin = SearchSimpleNumber(Atkin, massiv, "Atkin");
-	//		PostavteNormMarksPlease(idealfinded, findedAtkin) ? cout << "\nSame\n" : cout << "\nNot same\n";
+			findedAtkin = SearchSimpleNumber(Atkin, massiv, "Atkin");
+			PostavteNormMarksPlease(idealfinded, findedAtkin) ? cout << "\nSame\n" : cout << "\nNot same\n";
 
-	//		findedMiller = SearchSimpleNumber(Test_Millera_Rabina, massiv, "Test_Millera_Rabina");
-	//		PostavteNormMarksPlease(idealfinded, findedMiller) ? cout << "\nSame\n" : cout << "\nNot same\n";
+			findedMiller = SearchSimpleNumber(Test_Millera_Rabina, massiv, "Test_Millera_Rabina");
+			PostavteNormMarksPlease(idealfinded, findedMiller) ? cout << "\nSame\n" : cout << "\nNot same\n";
 
-	//		findedFerma = SearchSimpleNumber(Ferma, massiv, "Test Ferma");
-	//		PostavteNormMarksPlease(idealfinded, findedFerma) ? cout << "\nSame\n" : cout << "\nNot same\n";
-	//	}
-	//
-	//} while (n>0);
+			findedFerma = SearchSimpleNumber(Ferma, massiv, "Test Ferma");
+			PostavteNormMarksPlease(idealfinded, findedFerma) ? cout << "\nSame\n" : cout << "\nNot same\n";
+		}
+	
+	} while (n>0);
 
 	do {
 		

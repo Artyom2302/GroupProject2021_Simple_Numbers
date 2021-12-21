@@ -43,20 +43,20 @@ bool Ferma(int p)
 		//rand(); 32767
 		a = dis(gen);
 
-		if (NOD(p, a) == 1)
-		{
+		/*if (NOD(p, a) == 1)*/
+		/*{*/
 			avstepeni = modpow(a, p - 1, p);
 			if (avstepeni != 1)
 			{
 				prostoe = false;
 				return prostoe;
 			}
-		}
-		else
+		/*}*/
+		/*else
 		{
 			prostoe = false;
 			return prostoe;
-		}
+		}*/
 	}
 
 	if (prostoe == true)
